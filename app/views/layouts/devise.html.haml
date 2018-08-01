@@ -1,0 +1,20 @@
+!!!
+%html
+	%head
+		%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+		%title ToDo
+		= csrf_meta_tags
+		= csp_meta_tag
+		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+		= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+	%body
+		.container
+			.row
+				.col-xs-10.col-md-10.col-sm-10.col-lg-10
+					.jumbotron.text-center
+						%h1 Todo
+						%p Manager your things to do with us,
+						%p And Never forget anything!
+			.row
+				.col-xs-4.col-md-4.col-sm-4.col-lg-4
+					= yield

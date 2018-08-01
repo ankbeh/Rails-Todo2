@@ -1,0 +1,15 @@
+.modal-dialog.modal-md{:role => "dialog"}
+	.modal-content
+		.modal-header
+			%button.close{"data-dismiss" => "modal", :type => "button"} ×
+			-#This is a ternary if else statemnt
+			%h1= task.new_record? ? 'New Task' : "Editing task #{task.title}"
+		-# We wont use redirect from rails instead we use javascript to dynamically submit form and then hide the modal
+		-#= simple_form_for task, class: 'clearfix' do |f|
+		= simple_form_for task, class: 'clearfix', remote: true do |f|
+			.modal-body
+				= f.input :title
+				= f.input :note
+				= f.input :completed, as: :string, input_html: { class: 'datepicker', value: task.completed.present? ? localize(task.completed, format: '%d/%m/%Y') : nil }
+			.modal-footer
+				= f.submit 'Save', class: 'btn btn-primary'

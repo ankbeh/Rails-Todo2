@@ -1,0 +1,2 @@
+\//To rerender task list partially after deleted of data
+$('#task-list').html('#{j(render partial: 'task_list', locals: {tasks: @tasks})}');

@@ -1,0 +1,4 @@
+= render partial: 'share/log-index'
+#task-list.container
+	= render partial: 'tasks/task_list', locals: {tasks: @tasks}
+#modal.modal.fade{:role => "dialog"}

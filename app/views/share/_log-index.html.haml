@@ -1,0 +1,13 @@
+.container
+	.row
+		.jumbotron
+			.row
+				.text-right
+					.btn.btn-danger= link_to 'logout', destroy_user_session_path, method: :delete
+				.text-center
+					%h1 My Todo
+					%h3
+						%strong= current_user.email
+					%p Manager your things to do with us
+					%p and Never forget anything!
+					.btn.btn-success= link_to 'New Task', new_task_path,{:remote => true}
