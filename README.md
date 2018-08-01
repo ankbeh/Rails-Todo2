@@ -1,24 +1,28 @@
-# README
+Create this app for practice
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Required
+Ruby installed
 
-Things you may want to cover:
+Manaul Install
+<code>$git clone https://github.com/ankbeh/Rails-Todo2.git
+$cd Rails-Todo2
+$bundle install</code>
 
-* Ruby version
+After that
 
-* System dependencies
+<code>rake db:migrate</code>
 
-* Configuration
+Copy the devise key code to config/initialisers/devise.rb
+Run above code again.
 
-* Database creation
+<code>$run bundle install</code>
+in one window of terminal
+<code>mailcatcher</code>
 
-* Database initialization
+browse to 127.0.0.1:1080
+Here you will reacieve email upon regestering an id.
 
-* How to run the test suite
+Next open another console window
+<code>$rails s</code>
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Create a user id and use the app.
